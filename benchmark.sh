@@ -1,27 +1,24 @@
 #!/bin/sh
 
-# Construir las imágenes de los contenedores antes de ejecutar
-echo "Building Docker images..."
+# Construir y ejecutar contenedores
+docker-compose up --build --abort-on-container-exit
 
-docker build -t python-benchmark ./python
-docker build -t java-benchmark ./java
-docker build -t javascript-benchmark ./javascript
-docker build -t c-benchmark ./c
-docker build -t php-benchmark ./php
+# Crear carpeta de resultados si no existe
+mkdir -p results
 
-# Ejecutar todos los contenedores usando docker-compose
-echo "Running containers..."
+# Copiar los archivos de salida desde cada contenedor
+docker cp c-container:/app/c_output.txt results/c_output.txt
+docker cp python-container:/app/py_output.txt results/py_output.txt
+docker cp java-container:/app/j_output.txt results/j_output.txt
+docker cp javascript-container:/app/js_output.txt results/js_output.txt
+docker cp php-container:/app/php_output.txt results/php_output.txt
 
-docker-compose up --build --remove-orphans
-
-# Esperar a que terminen y recolectar resultados
+# Mostrar los resultados
 echo "-------------------"
 echo "Benchmark Results:"
 echo "-------------------"
-
-# Mostrar los resultados de cada lenguaje
-for lang in python java javascript c php; do
-    echo "$lang:"
-    cat ./results/${lang}_output.txt
-    echo "-------------------"
+for file in results/*.txt; do
+  echo "${file##*/}:"
+  cat "$file"
+  echo "-------------------"
 done

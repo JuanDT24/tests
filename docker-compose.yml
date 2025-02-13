@@ -2,30 +2,17 @@ version: "3.8"
 
 services:
   python:
-    build: ./python
     container_name: python-container
-    volumes:
-      - shared-data:/results
+    build: ./python
   java:
-    build: ./java
     container_name: java-container
-    volumes:
-      - shared-data:/results
+    build: ./java
   javascript:
-    build: ./javascript
     container_name: javascript-container
-    volumes:
-      - shared-data:/results
+    build: ./javascript
   c:
-    build: ./c
     container_name: c-container
-    volumes:
-      - shared-data:/results
+    build: ./c
   php:
-    build: ./php
     container_name: php-container
-    volumes:
-      - shared-data:/results
-
-volumes:
-  shared-data:
+    build: ./php
