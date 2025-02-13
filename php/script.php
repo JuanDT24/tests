@@ -11,7 +11,7 @@ function fibonacci($n){
 // Driver Code
 $n = 40;
 $start = microtime(true);
-echo "The $n-th Fibonacci number is: " . fibonacci($n) . "\n";
 $time_elapsed_secs = microtime(true) - $start;
+echo "php:\n";
 echo "Time taken was $time_elapsed_secs seconds\n";
 ?>

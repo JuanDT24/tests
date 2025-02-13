@@ -12,7 +12,7 @@ n = 40
 start=(time.time())
 result = nth_fibonacci(n)
 end=time.time()
-print(f"The {n}th Fibonacci number is {result}")
+print(f"python:")
 print(f"Time taken: {end-start} seconds")
 
 

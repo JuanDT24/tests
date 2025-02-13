@@ -1,0 +1,11 @@
+{
+  "name": "javascript-benchmark",
+  "version": "1.0.0",
+  "description": "Benchmarking Fibonacci execution time in JavaScript",
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
