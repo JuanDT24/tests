@@ -15,5 +15,6 @@ public class Main {
         System.out.print("java:");
         System.out.print(endTime - startTime);
         System.out.print("ms");
+        System.out.println("");
     }
 }

@@ -16,8 +16,6 @@ int main() {
     end = clock();
 
     // Imprimir solo el tiempo en milisegundos
-    printf("C:");
-    printf("%ld\n", (end - start) * 1000 / CLOCKS_PER_SEC);
-    printf("ms");
+    printf("C: %ldms\n", (end - start) * 1000 / CLOCKS_PER_SEC);
     return 0;
 }
