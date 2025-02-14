@@ -12,7 +12,6 @@ public class test {
         int result = nthFibonacci(n);
         long endTime = System.currentTimeMillis();
         double timeTaken = (endTime - startTime)/1000.0; 
-        System.out.println("The " + n + "th Fibonacci number is " + result);
         System.out.println("Time taken was " + timeTaken + " seconds");
     }
 }
