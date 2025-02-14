@@ -11,7 +11,7 @@ int main() {
     int n = 40;
     clock_t start, end;
     start = clock();
-    fn = Fibonacci(n);
+    int fn = Fibonacci(n);
     end = clock();
     printf("Time taken: %f seconds\n", (double)(end - start) / CLOCKS_PER_SEC);
     return 0;
