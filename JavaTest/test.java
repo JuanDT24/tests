@@ -1,4 +1,4 @@
-package JavaTest;
+package javatest;
 public class test {
     static int nthFibonacci(int n){
         if (n <= 1) {
