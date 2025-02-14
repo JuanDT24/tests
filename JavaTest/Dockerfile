@@ -1,5 +1,5 @@
 FROM openjdk:17-alpine  
 WORKDIR /app  
-COPY Main.java .  
-RUN javac Main.java  
-CMD java Main > java_output.txt && cp java_output.txt /host/java_output.txt && cat /host/java_output.txt
+COPY test.java .  
+RUN javac test.java  
+CMD java test > output.txt && cp output.txt /host/output.txt && cat /host/output.txt

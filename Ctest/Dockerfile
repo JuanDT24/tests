@@ -1,6 +1,6 @@
 FROM alpine:latest  
 WORKDIR /app  
-COPY main.c .  
+COPY test.c .  
 RUN apk add --no-cache gcc musl-dev  
-RUN gcc main.c -o main  
-CMD ./main > c_output.txt && cp c_output.txt /host/c_output.txt && cat /host/c_output.txt
+RUN gcc test.c -o test  
+CMD ./test > output.txt && cp output.txt /host/output.txt && cat /host/output.txt
