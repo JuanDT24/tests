@@ -1,7 +1,5 @@
-package java;
-
 public class Main {
-    static int nthFibonacci(int n){
+    static int nthFibonacci(int n) {
         if (n <= 1) {
             return n;
         }
@@ -14,7 +12,6 @@ public class Main {
         nthFibonacci(n);
         long endTime = System.currentTimeMillis();
 
-        // Solo imprimir el tiempo en milisegundos, según lo requerido
         System.out.print("java:");
         System.out.print(endTime - startTime);
         System.out.print("ms");

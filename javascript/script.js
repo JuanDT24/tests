@@ -11,5 +11,6 @@ Fibonacci(n);
 const endTime = performance.now();
 
 // Solo imprimimos el tiempo en milisegundos para el benchmark
-console.log("javascript:");
-console.log(Math.round(endTime - startTime));
+
+console.log("javascript:",Math.round(endTime - startTime),"ms");
+
