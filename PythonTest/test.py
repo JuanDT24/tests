@@ -12,8 +12,9 @@ n = 40
 start=(time.time())
 result = nth_fibonacci(n)
 end=time.time()
-print(f"The {n}th Fibonacci number is {result}")
-print(f"Time taken: {end-start} seconds")
+with open("output.txt", "w") as file:
+    file.write(f"Time taken: {end-start} seconds")
+
 
 
 

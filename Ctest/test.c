@@ -13,6 +13,8 @@ int main() {
     start = clock();
     int fn = Fibonacci(n);
     end = clock();
-    printf("Time taken: %f seconds\n", (double)(end - start) / CLOCKS_PER_SEC);
+    FILE *file = fopen("output.txt", "w");
+    fprintf(file, "Time taken: %f seconds\n", (double)(end - start) / CLOCKS_PER_SEC);
+    fclose(file);
     return 0;
 }
