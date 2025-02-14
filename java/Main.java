@@ -15,7 +15,8 @@ public class Main {
         long endTime = System.currentTimeMillis();
 
         // Solo imprimir el tiempo en milisegundos, según lo requerido
-        System.out.println("java:");
-        System.out.println(endTime - startTime);
+        System.out.print("java:");
+        System.out.print(endTime - startTime);
+        System.out.print("ms");
     }
 }
