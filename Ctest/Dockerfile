@@ -1,4 +1,4 @@
-FROM alpine:latest  
+FROM gcc:11
 WORKDIR /app  
 COPY test.c .  
 RUN apk add --no-cache gcc musl-dev  
